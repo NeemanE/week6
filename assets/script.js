@@ -123,7 +123,7 @@ function showCurrentWeather(weatherData) {
 }
 
 function calculateUV(latitude, longitude) {
-    var uvindexAPI = "http://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&appid=a4a3175d4b58de2f36d962b7e179ec68";
+    var uvindexAPI = "https://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&appid=a4a3175d4b58de2f36d962b7e179ec68";
 
     fetch(uvindexAPI)
         .then(function (response) {
