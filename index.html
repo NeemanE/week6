@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Weather Forecast Dashboard</title>
+</head>
+
+<body>
+
+    <nav class="navbar bg-primary">
+        <h1 class="w-100 h1 text-center">Weather Forecast Dashboard</h1>
+    </nav>
+
+    <section class="box">
+
+        <div class="row">
+            <div class="col-2 bg-light">
+                <h3 class="searchlabel my-2">City Search</h3>
+                <div class="input-group mb-2">
+                    <input id="searchinput" type="text" class="form-control"
+                        placeholder="Enter the city name you are looking for"
+                        aria-label="Enter the city name you are looking for">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="searchbutton">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary mb-2" type="button" id="clear-search">Clear Previous Searches</button>
+                <div>
+                    <ul id="history" class="w-100"></ul>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row mr-0">
+                    <div id="local-weather" class="col-12 border rounded m-2 rounded">
+                        <div class="row">
+                            <div class="col-11">
+                                <span id="city" class="align-middle"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-11">
+                                <p id="local-temp"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-11">
+                                <p id="local-humidity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-11">
+                                <p id="local-wind"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-11 d-flex">
+                                <p id="local-UV"></p>
+                                <p id="UV-value"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-11">
+                        <h3>5-Day Forecast:</h3>
+                    </div>
+                </div>
+                <div id="five-day-forecast" class="row">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
