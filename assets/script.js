@@ -69,7 +69,7 @@ function getApi(city) {
                 forecastHumidity.textContent = "Humidity: " + weeklyHumidity + "%";
 
                 var forecastIcon = document.createElement("img");
-                forecastIcon.setAttribute("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png")
+                forecastIcon.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png")
 
                 forecastDiv.append(date, forecastIcon, temperature, forecastHumidity)
                 fiveDayForecast.appendChild(forecastDiv);
@@ -104,7 +104,7 @@ function showCurrentWeather(weatherData) {
     citySearched.append(showCity);
 
     var weatherIcon = document.createElement("img");
-    weatherIcon.setAttribute("src", "http://openweathermap.org/img/w/" + weatherData.weather[0].icon + ".png")
+    weatherIcon.setAttribute("src", "https://openweathermap.org/img/w/" + weatherData.weather[0].icon + ".png")
 
     var todaysDate = new Date(moment().format()).toLocaleDateString();
 
